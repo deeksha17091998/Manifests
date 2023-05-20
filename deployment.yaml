@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: deekshaarora/jenkins:image65
+        image: deekshaarora/jenkins:image{BUILD_NUMBER}mage65
         ports:
         - containerPort: 8080
