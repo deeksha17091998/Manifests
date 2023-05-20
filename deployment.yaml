@@ -1,21 +1,21 @@
-apiVersion:image{BUILD_NUMBER}apps/v1
-kind:image{BUILD_NUMBER}Deployment
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name:image{BUILD_NUMBER}spring-boot-app
+  name: spring-boot-app
   labels:
-    app:image{BUILD_NUMBER}spring-boot-app
+    app: spring-boot-app
 spec:
-  replicas:image{BUILD_NUMBER}2
+  replicas: 2
   selector:
     matchLabels:
-      app:image{BUILD_NUMBER}spring-boot-app
+      app: spring-boot-app
   template:
     metadata:
       labels:
-        app:image{BUILD_NUMBER}spring-boot-app
+        app: spring-boot-app
     spec:
       containers:
-      - name:image{BUILD_NUMBER}spring-boot-app
-        image:image{BUILD_NUMBER}deekshaarora/jenkins:image{BUILD_NUMBER}5
+      - name: spring-boot-app
+        image: deekshaarora/jenkins:image65
         ports:
-        - containerPort:image{BUILD_NUMBER}8080
+        - containerPort: 8080
